@@ -1,0 +1,43 @@
+--- 
+title: "ABS DataLab Manual"
+author: "Elyse Dwyer"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+output: bookdown::gitbook
+biblio-style: apalike
+link-citations: yes
+github-repo: e61-Institute/abs-microdata-wiki
+description: "This is a wiki for the effective use of ABS Microdata Products in DataLab"
+---
+
+# Preface
+
+## Why make a manual on this data?
+
+Like many other large Australian microdata sets, e.g. HILDA, there is a broad scope of 
+data items that are included in the ABS DataLab's suite of products. The way data is organised in DataLab is complex, and datasets are very large in terms of observations. As such, it can be useful to have a guide to get started.
+
+This manual is intended to build on what already has been compiled elsewhere in terms of metadata and 
+best practices, as well as to provide some handy utilities in R for common operations used on the data, e.g. 
+merging data files. 
+
+## General Tips for using DataLab
+
+### Efficiency is Key
+
+As with most microdata, there is usually a large number of observations, however this is especially true for datasets such as BLADE, where nearly the entire population of Australian firms is observed. It can be helpful to speed up your code by avoiding for loops and/or running operations in parallel rather than series. Packages such as `data.table` in R already provide some parallel functionality, thus it is worth familiarising yourself with this if you have not already. If you are familiar with the R packages in `tidyverse` such as `dplyr`, there are many suitable analogues in `data.table`.
+
+### Packages
+
+If you are an R user, DataLab uses R package manager for downloading packages securely. Most packages in CRAN are available in the package manager, however, there are some uncommon/non-CRAN packages which are not included. Where possible, try to avoid using obscure R packages.
+
+## Third-Party DataLab Resources
+
+### BLADE
+
+Productivity Commission's discussion of data item coverage in BLADE and its uses for productivity research.
+
+https://www.pc.gov.au/research/supporting/blade
+
+

@@ -1,0 +1,16 @@
+bookdown::gitbook:
+  highlight: tango
+  css: ["assets/style.css","assets/toc.css"]
+  config:
+    toc:
+      before: |
+        <p> ABS Datalab Manual</p>
+      after: |
+        <p> Contact elyse.dwyer@e61.in for enquiries</p>
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default
+bookdown::bs4_book: default

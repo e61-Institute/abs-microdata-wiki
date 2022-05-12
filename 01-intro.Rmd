@@ -1,0 +1,80 @@
+# BLADE {#BLADE}
+
+
+## General Structure of BLADE
+
+BLADE is stored in the Product network drive of your virtual machine in DataLab. There are separate folders  for different file types, I recommend working with csv files if you are an R or Python user. There is a separate csv file for each financial year and source, e.g. one file will represent BAS returns in FY18-19. Alongside general data cleaning, you will need to merge across different sources, as well as appending data for each year, if you are interested in panel data. 
+
+The 'core' of BLADE consists of four different data sources containing administrative data which most businesses will complete during the financial year:
+
+- Indicative Data Items: This contains the 'spine' of ABNs from which all other datasets can be linked.
+- BAS: These are filled out by all firms that remit GST and include information on sales, operating expenses, purchases and capital expenditures
+- BIT: These files contain income tax data (including balance sheet data) that is submitted to the ATO.
+- PAYG: This contains information on employee headcount and wages expense when payment summaries are submitted to the ATO. 
+
+There are other datasets within the extended version of BLADE which cover R & D expenses and customs data, however these tend to cover a smaller proportion of firms within the population. 
+
+
+### TAU or ABN levels
+
+There are two levels of observation inside BLADE, the ABN level, which encompasses a legal entity and the TAU level, which attempts to identify the 'economic firm'. A TAU may consist of multiple ABNs, for example, all of the legal entities that Kmart Australia operates would be aggregated into one TAU. TAUs can be aggregated further into an enterprise id, which in the case of Kmart, would identify its parent company Wesfarmers Ltd. 
+
+
+## BLADE Utils in R
+
+
+### Append multiple time periods together
+
+``` {r, eval=FALSE}
+
+library(matrixStats)
+library(data.table)
+
+blade_path <- " " # Directory containing BLADE source files in CSV format
+
+destination_path <-"  " # Directory where merged files will go
+
+file_patterns <- c("frame", "BAS", "BIT", "PAYG") # File path patterns
+
+dest_patterns <- c("ind_items.csv", "BAS.csv", "BIT.csv", "PAYG.csv") # Destination files
+
+for (i in 1:4) {
+
+    files <- list.files(path, pattern=file_patterns[i], full.names=TRUE)
+    files <- lapply(files, fread)
+    for (j in 1:length(files)) {
+        files[[j]] <- files[[j]][,source:=match(j,files)+10]
+    }
+    files <- rbindlist(files)
+    fwrite(files,file = paste(destination_path, dest_patterns[i], sep="/"))
+
+}
+
+
+```
+
+
+### Merging BLADE core datasets
+
+```{r, eval=FALSE}
+
+# This is assuming you have completed the appending step
+
+# Read in the files you saved down
+
+objects <- c("ind_items", "BAS", "BIT", "PAYG")
+
+for (i in 1:4){
+  
+    assign(objects[i],fread(paste(destination_path, dest_patterns[i], sep="/")))
+}
+
+# Merge datatable objects
+
+for (i in list(BAS,BIT,PAYG)){
+    
+    ind_items <- i[ind_items, on = .(id,tsid)]
+}
+
+
+```
