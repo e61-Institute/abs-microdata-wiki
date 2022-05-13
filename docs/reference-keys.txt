@@ -12,3 +12,5 @@ blade-utils-in-r
 append-multiple-time-periods-together
 merging-blade-core-datasets
 madip
+common-cleaning-steps-in-the-blade-data
+data.table-method-of-running-regressions

@@ -1,65 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title> 2 BLADE | ABS DataLab Manual</title>
-<meta name="author" content="Elyse Dwyer">
-<meta name="description" content="2.1 General Structure of BLADE BLADE is stored in the Product network drive of your virtual machine in DataLab. There are separate folders for different file types, I recommend working with csv...">
-<meta name="generator" content="bookdown 0.26 with bs4_book()">
-<meta property="og:title" content=" 2 BLADE | ABS DataLab Manual">
-<meta property="og:type" content="book">
-<meta property="og:description" content="2.1 General Structure of BLADE BLADE is stored in the Product network drive of your virtual machine in DataLab. There are separate folders for different file types, I recommend working with csv...">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=" 2 BLADE | ABS DataLab Manual">
-<meta name="twitter:description" content="2.1 General Structure of BLADE BLADE is stored in the Product network drive of your virtual machine in DataLab. There are separate folders for different file types, I recommend working with csv...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
-    
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  </style>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 2 BLADE | ABS DataLab Manual</title>
+  <meta name="description" content="This is a wiki for the effective use of ABS Microdata Products in DataLab" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 2 BLADE | ABS DataLab Manual" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a wiki for the effective use of ABS Microdata Products in DataLab" />
+  <meta name="github-repo" content="e61-Institute/abs-microdata-wiki" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 2 BLADE | ABS DataLab Manual" />
+  
+  <meta name="twitter:description" content="This is a wiki for the effective use of ABS Microdata Products in DataLab" />
+  
+
+<meta name="author" content="Elyse Dwyer" />
+
+
+<meta name="date" content="2022-05-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="madip.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
+<link rel="stylesheet" href="assets/toc.css" type="text/css" />
 </head>
-<body data-spy="scroll" data-target="#toc">
 
-<div class="container-fluid">
-<div class="row">
-  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<body>
 
-    <div class="d-flex align-items-start justify-content-between">
-      <h1>
-        <a href="index.html" title="">ABS DataLab Manual</a>
-      </h1>
-      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
-    </div>
 
-    <div id="main-nav" class="collapse-lg">
-      <form role="search">
-        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
-</form>
 
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html"><span class="header-section-number">1</span> Preface</a></li>
-<li><a class="active" href="BLADE.html"><span class="header-section-number">2</span> BLADE</a></li>
-<li><a class="" href="madip.html"><span class="header-section-number">3</span> MADIP</a></li>
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<p> ABS Datalab Manual</p>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#why-make-a-manual-on-this-data"><i class="fa fa-check"></i><b>1.1</b> Why make a manual on this data?</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#general-tips-for-using-datalab"><i class="fa fa-check"></i><b>1.2</b> General Tips for using DataLab</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#efficiency-is-key"><i class="fa fa-check"></i><b>1.2.1</b> Efficiency is Key</a></li>
+<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#packages"><i class="fa fa-check"></i><b>1.2.2</b> Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#third-party-datalab-resources"><i class="fa fa-check"></i><b>1.3</b> Third-Party DataLab Resources</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#blade"><i class="fa fa-check"></i><b>1.3.1</b> BLADE</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="BLADE.html"><a href="BLADE.html"><i class="fa fa-check"></i><b>2</b> BLADE</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="BLADE.html"><a href="BLADE.html#general-structure-of-blade"><i class="fa fa-check"></i><b>2.1</b> General Structure of BLADE</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="BLADE.html"><a href="BLADE.html#tau-or-abn-levels"><i class="fa fa-check"></i><b>2.1.1</b> TAU or ABN levels</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="BLADE.html"><a href="BLADE.html#blade-utils-in-r"><i class="fa fa-check"></i><b>2.2</b> BLADE Utils in R</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="BLADE.html"><a href="BLADE.html#append-multiple-time-periods-together"><i class="fa fa-check"></i><b>2.2.1</b> Append multiple time periods together</a></li>
+<li class="chapter" data-level="2.2.2" data-path="BLADE.html"><a href="BLADE.html#merging-blade-core-datasets"><i class="fa fa-check"></i><b>2.2.2</b> Merging BLADE core datasets</a></li>
+<li class="chapter" data-level="2.2.3" data-path="BLADE.html"><a href="BLADE.html#common-cleaning-steps-in-the-blade-data"><i class="fa fa-check"></i><b>2.2.3</b> Common cleaning steps in the BLADE data</a></li>
+<li class="chapter" data-level="2.2.4" data-path="BLADE.html"><a href="BLADE.html#data.table-method-of-running-regressions"><i class="fa fa-check"></i><b>2.2.4</b> data.table method of running regressions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="madip.html"><a href="madip.html"><i class="fa fa-check"></i><b>3</b> MADIP</a></li>
+<li class="divider"></li>
+<p> Contact elyse.dwyer@e61.in for enquiries</p>
+
 </ul>
 
-        <div class="book-extra">
-          
-        </div>
       </nav>
-</div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="BLADE" class="section level1" number="2">
-<h1>
-<span class="header-section-number"> 2</span> BLADE<a class="anchor" aria-label="anchor" href="#BLADE"><i class="fas fa-link"></i></a>
-</h1>
-<div id="general-structure-of-blade" class="section level2" number="2.1">
-<h2>
-<span class="header-section-number">2.1</span> General Structure of BLADE<a class="anchor" aria-label="anchor" href="#general-structure-of-blade"><i class="fas fa-link"></i></a>
-</h2>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ABS DataLab Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="BLADE" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number"> 2</span> BLADE<a href="BLADE.html#BLADE" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="general-structure-of-blade" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> General Structure of BLADE<a href="BLADE.html#general-structure-of-blade" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>BLADE is stored in the Product network drive of your virtual machine in DataLab. There are separate folders for different file types, I recommend working with csv files if you are an R or Python user. There is a separate csv file for each financial year and source, e.g. one file will represent BAS returns in FY18-19. Alongside general data cleaning, you will need to merge across different sources, as well as appending data for each year, if you are interested in panel data.</p>
 <p>The ‘core’ of BLADE consists of four different data sources containing administrative data which most businesses will complete during the financial year:</p>
 <ul>
@@ -69,111 +197,127 @@
 <li>PAYG: This contains information on employee headcount and wages expense when payment summaries are submitted to the ATO.</li>
 </ul>
 <p>There are other datasets within the extended version of BLADE which cover R &amp; D expenses and customs data, however these tend to cover a smaller proportion of firms within the population.</p>
-<div id="tau-or-abn-levels" class="section level3" number="2.1.1">
-<h3>
-<span class="header-section-number">2.1.1</span> TAU or ABN levels<a class="anchor" aria-label="anchor" href="#tau-or-abn-levels"><i class="fas fa-link"></i></a>
-</h3>
+<div id="tau-or-abn-levels" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> TAU or ABN levels<a href="BLADE.html#tau-or-abn-levels" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>There are two levels of observation inside BLADE, the ABN level, which encompasses a legal entity and the TAU level, which attempts to identify the ‘economic firm’. A TAU may consist of multiple ABNs, for example, all of the legal entities that Kmart Australia operates would be aggregated into one TAU. TAUs can be aggregated further into an enterprise id, which in the case of Kmart, would identify its parent company Wesfarmers Ltd. </p>
 </div>
 </div>
-<div id="blade-utils-in-r" class="section level2" number="2.2">
-<h2>
-<span class="header-section-number">2.2</span> BLADE Utils in R<a class="anchor" aria-label="anchor" href="#blade-utils-in-r"><i class="fas fa-link"></i></a>
-</h2>
-<div id="append-multiple-time-periods-together" class="section level3" number="2.2.1">
-<h3>
-<span class="header-section-number">2.2.1</span> Append multiple time periods together<a class="anchor" aria-label="anchor" href="#append-multiple-time-periods-together"><i class="fas fa-link"></i></a>
-</h3>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/HenrikBengtsson/matrixStats">matrixStats</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-datatable.com">data.table</a></span><span class="op">)</span>
-
-<span class="va">blade_path</span> <span class="op">&lt;-</span> <span class="st">" "</span> <span class="co"># Directory containing BLADE source files in CSV format</span>
-
-<span class="va">destination_path</span> <span class="op">&lt;-</span><span class="st">"  "</span> <span class="co"># Directory where merged files will go</span>
-
-<span class="va">file_patterns</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"frame"</span>, <span class="st">"BAS"</span>, <span class="st">"BIT"</span>, <span class="st">"PAYG"</span><span class="op">)</span> <span class="co"># File path patterns</span>
-
-<span class="va">dest_patterns</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"ind_items.csv"</span>, <span class="st">"BAS.csv"</span>, <span class="st">"BIT.csv"</span>, <span class="st">"PAYG.csv"</span><span class="op">)</span> <span class="co"># Destination files</span>
-
-<span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span> <span class="op">{</span>
-
-    <span class="va">files</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span><span class="va">path</span>, pattern<span class="op">=</span><span class="va">file_patterns</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, full.names<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span>
-    <span class="va">files</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">files</span>, <span class="va">fread</span><span class="op">)</span>
-    <span class="kw">for</span> <span class="op">(</span><span class="va">j</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">files</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
-        <span class="va">files</span><span class="op">[[</span><span class="va">j</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">files</span><span class="op">[[</span><span class="va">j</span><span class="op">]</span><span class="op">]</span><span class="op">[</span>,<span class="va">source</span><span class="op">:=</span><span class="fu"><a href="https://rdrr.io/r/base/match.html">match</a></span><span class="op">(</span><span class="va">j</span>,<span class="va">files</span><span class="op">)</span><span class="op">+</span><span class="fl">10</span><span class="op">]</span>
-    <span class="op">}</span>
-    <span class="va">files</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/rbindlist.html">rbindlist</a></span><span class="op">(</span><span class="va">files</span><span class="op">)</span>
-    <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fwrite.html">fwrite</a></span><span class="op">(</span><span class="va">files</span>,file <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">destination_path</span>, <span class="va">dest_patterns</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, sep<span class="op">=</span><span class="st">"/"</span><span class="op">)</span><span class="op">)</span>
-
-<span class="op">}</span></code></pre></div>
+<div id="blade-utils-in-r" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> BLADE Utils in R<a href="BLADE.html#blade-utils-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="append-multiple-time-periods-together" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Append multiple time periods together<a href="BLADE.html#append-multiple-time-periods-together" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="BLADE.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(matrixStats)</span>
+<span id="cb1-2"><a href="BLADE.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb1-3"><a href="BLADE.html#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="BLADE.html#cb1-4" aria-hidden="true" tabindex="-1"></a>blade_path <span class="ot">&lt;-</span> <span class="st">&quot; &quot;</span> <span class="co"># Directory containing BLADE source files in CSV format</span></span>
+<span id="cb1-5"><a href="BLADE.html#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="BLADE.html#cb1-6" aria-hidden="true" tabindex="-1"></a>destination_path <span class="ot">&lt;-</span><span class="st">&quot;  &quot;</span> <span class="co"># Directory where merged files will go</span></span>
+<span id="cb1-7"><a href="BLADE.html#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="BLADE.html#cb1-8" aria-hidden="true" tabindex="-1"></a>file_patterns <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;frame&quot;</span>, <span class="st">&quot;BAS&quot;</span>, <span class="st">&quot;BIT&quot;</span>, <span class="st">&quot;PAYG&quot;</span>) <span class="co"># File path patterns</span></span>
+<span id="cb1-9"><a href="BLADE.html#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="BLADE.html#cb1-10" aria-hidden="true" tabindex="-1"></a>dest_patterns <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;ind_items.csv&quot;</span>, <span class="st">&quot;BAS.csv&quot;</span>, <span class="st">&quot;BIT.csv&quot;</span>, <span class="st">&quot;PAYG.csv&quot;</span>) <span class="co"># Destination files</span></span>
+<span id="cb1-11"><a href="BLADE.html#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="BLADE.html#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>) {</span>
+<span id="cb1-13"><a href="BLADE.html#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="BLADE.html#cb1-14" aria-hidden="true" tabindex="-1"></a>    files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(path, <span class="at">pattern=</span>file_patterns[i], <span class="at">full.names=</span><span class="cn">TRUE</span>)</span>
+<span id="cb1-15"><a href="BLADE.html#cb1-15" aria-hidden="true" tabindex="-1"></a>    files <span class="ot">&lt;-</span> <span class="fu">lapply</span>(files, fread)</span>
+<span id="cb1-16"><a href="BLADE.html#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(files)) {</span>
+<span id="cb1-17"><a href="BLADE.html#cb1-17" aria-hidden="true" tabindex="-1"></a>        files[[j]] <span class="ot">&lt;-</span> files[[j]][,source<span class="sc">:</span><span class="er">=</span><span class="fu">match</span>(j,files)<span class="sc">+</span><span class="dv">10</span>]</span>
+<span id="cb1-18"><a href="BLADE.html#cb1-18" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-19"><a href="BLADE.html#cb1-19" aria-hidden="true" tabindex="-1"></a>    files <span class="ot">&lt;-</span> <span class="fu">rbindlist</span>(files)</span>
+<span id="cb1-20"><a href="BLADE.html#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fwrite</span>(files,<span class="at">file =</span> <span class="fu">paste</span>(destination_path, dest_patterns[i], <span class="at">sep=</span><span class="st">&quot;/&quot;</span>))</span>
+<span id="cb1-21"><a href="BLADE.html#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="BLADE.html#cb1-22" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
-<div id="merging-blade-core-datasets" class="section level3" number="2.2.2">
-<h3>
-<span class="header-section-number">2.2.2</span> Merging BLADE core datasets<a class="anchor" aria-label="anchor" href="#merging-blade-core-datasets"><i class="fas fa-link"></i></a>
-</h3>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># This is assuming you have completed the appending step</span>
-
-<span class="co"># Read in the files you saved down</span>
-
-<span class="va">objects</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"ind_items"</span>, <span class="st">"BAS"</span>, <span class="st">"BIT"</span>, <span class="st">"PAYG"</span><span class="op">)</span>
-
-<span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span><span class="op">{</span>
-  
-    <span class="fu"><a href="https://rdrr.io/r/base/assign.html">assign</a></span><span class="op">(</span><span class="va">objects</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>,<span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">destination_path</span>, <span class="va">dest_patterns</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, sep<span class="op">=</span><span class="st">"/"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
-<span class="op">}</span>
-
-<span class="co"># Merge datatable objects</span>
-
-<span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">BAS</span>,<span class="va">BIT</span>,<span class="va">PAYG</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
-    
-    <span class="va">ind_items</span> <span class="op">&lt;-</span> <span class="va">i</span><span class="op">[</span><span class="va">ind_items</span>, on <span class="op">=</span> <span class="fu">.</span><span class="op">(</span><span class="va">id</span>,<span class="va">tsid</span><span class="op">)</span><span class="op">]</span>
-<span class="op">}</span></code></pre></div>
+<div id="merging-blade-core-datasets" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Merging BLADE core datasets<a href="BLADE.html#merging-blade-core-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="BLADE.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This is assuming you have completed the appending step</span></span>
+<span id="cb2-2"><a href="BLADE.html#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="BLADE.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the files you saved down</span></span>
+<span id="cb2-4"><a href="BLADE.html#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="BLADE.html#cb2-5" aria-hidden="true" tabindex="-1"></a>objects <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;ind_items&quot;</span>, <span class="st">&quot;BAS&quot;</span>, <span class="st">&quot;BIT&quot;</span>, <span class="st">&quot;PAYG&quot;</span>)</span>
+<span id="cb2-6"><a href="BLADE.html#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="BLADE.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>){</span>
+<span id="cb2-8"><a href="BLADE.html#cb2-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-9"><a href="BLADE.html#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">assign</span>(objects[i],<span class="fu">fread</span>(<span class="fu">paste</span>(destination_path, dest_patterns[i], <span class="at">sep=</span><span class="st">&quot;/&quot;</span>)))</span>
+<span id="cb2-10"><a href="BLADE.html#cb2-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-11"><a href="BLADE.html#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="BLADE.html#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge datatable objects</span></span>
+<span id="cb2-13"><a href="BLADE.html#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="BLADE.html#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">list</span>(BAS,BIT,PAYG)){</span>
+<span id="cb2-15"><a href="BLADE.html#cb2-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-16"><a href="BLADE.html#cb2-16" aria-hidden="true" tabindex="-1"></a>    ind_items <span class="ot">&lt;-</span> i[ind_items, on <span class="ot">=</span> .(id,tsid)]</span>
+<span id="cb2-17"><a href="BLADE.html#cb2-17" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<div id="common-cleaning-steps-in-the-blade-data" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Common cleaning steps in the BLADE data<a href="BLADE.html#common-cleaning-steps-in-the-blade-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="data.table-method-of-running-regressions" class="section level3 hasAnchor" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> data.table method of running regressions<a href="BLADE.html#data.table-method-of-running-regressions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 
 </div>
 </div>
 </div>
-  <div class="chapter-nav">
-<div class="prev"><a href="index.html"><span class="header-section-number">1</span> Preface</a></div>
-<div class="next"><a href="madip.html"><span class="header-section-number">3</span> MADIP</a></div>
-</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#BLADE"><span class="header-section-number">2</span> BLADE</a></li>
-<li>
-<a class="nav-link" href="#general-structure-of-blade"><span class="header-section-number">2.1</span> General Structure of BLADE</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#tau-or-abn-levels"><span class="header-section-number">2.1.1</span> TAU or ABN levels</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#blade-utils-in-r"><span class="header-section-number">2.2</span> BLADE Utils in R</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#append-multiple-time-periods-together"><span class="header-section-number">2.2.1</span> Append multiple time periods together</a></li>
-<li><a class="nav-link" href="#merging-blade-core-datasets"><span class="header-section-number">2.2.2</span> Merging BLADE core datasets</a></li>
-</ul>
-</li>
-</ul>
+            </section>
 
-      <div class="book-extra">
-        <ul class="list-unstyled">
-          
-        </ul>
-</div>
-    </nav>
-</div>
-
-</div>
-</div> <!-- .container -->
-
-<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
-
-  <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>ABS DataLab Manual</strong>" was written by Elyse Dwyer. It was last built on 2022-05-12.</p>
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="madip.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
   </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["abs-microdata-wiki.pdf", "abs-microdata-wiki.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
 
-  <div class="col-12 col-md-6 mt-3">
-    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
-  </div>
-
-</div></div>
-</footer>
 </body>
+
 </html>

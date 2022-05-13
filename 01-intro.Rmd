@@ -78,3 +78,17 @@ for (i in list(BAS,BIT,PAYG)){
 
 
 ```
+
+
+### Common cleaning steps in the BLADE data
+
+
+### data.table method of running regressions
+
+```{r, eval=FALSE}
+
+
+
+
+
+```
